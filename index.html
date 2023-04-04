@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Heart-shaped Name</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f7cac9;
+      }
+
+      .name {
+        position: absolute;
+        cursor: pointer;
+        font-size: large;
+        font-family: poppins;
+        font-weight: bold;
+        z-index: 1;
+        color: transparent;
+        transition: all 0.5s ease-out;
+      }
+
+      .heart {
+        position: relative;
+        width: 100px;
+        height: 90px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      .heart:before,
+      .heart:after {
+        position: absolute;
+        content: "";
+        top: -20px;
+        left: 50px;
+        width: 100px;
+        height: 160px;
+        background: #f44336;
+        border-radius: 50px 50px 0 0;
+        transform: rotate(-45deg);
+        transform-origin: 0 100%;
+        cursor: pointer;
+        transition: all 0.5s ease-out;
+      }
+
+      .heart:after {
+        left: -50px;
+        transform: rotate(45deg);
+        transform-origin: 100% 100%;
+      }
+
+      .heart:hover:before,
+      .heart:hover:after {
+        background: #f7cac9;
+      }
+      .heart:hover .name {
+        color: #f44336;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="heart">
+      <span class="name">Sérine Fraoussi</span>
+    </div>
+  </body>
+  <script>
+    console.log("heart");
+    heart = document.querySelector(".heart");
+    heart.addEventListener("click", () => {
+      window.location.href =
+        "https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUJcmljayByb2xs";
+    });
+  </script>
+</html>
